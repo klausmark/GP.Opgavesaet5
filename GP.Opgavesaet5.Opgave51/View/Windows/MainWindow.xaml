@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="640">
     <Grid>
-        
+        <ListView ItemsSource="{Binding Path=Persons}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="130" Header="Navn" DisplayMemberBinding="{Binding Path=FullName}" />
+                    <GridViewColumn Width="70" Header="Fornavn" DisplayMemberBinding="{Binding Path=FirstName}" />
+                    <GridViewColumn Width="70" Header="Mellemnavn" DisplayMemberBinding="{Binding Path=MiddleName}" />
+                    <GridViewColumn Width="70" Header="Efternavn" DisplayMemberBinding="{Binding Path=LastName}" />
+                    <GridViewColumn Width="100" Header="Fødselsdag" DisplayMemberBinding="{Binding Path=Birthday}" />
+                    <GridViewColumn Width="35" Header="Alder" DisplayMemberBinding="{Binding Path=Age}" />
+                    <GridViewColumn Width="55" Header="Køn" DisplayMemberBinding="{Binding Path=Sex}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

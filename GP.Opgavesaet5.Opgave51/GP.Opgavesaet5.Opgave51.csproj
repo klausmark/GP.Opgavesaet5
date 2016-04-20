@@ -66,6 +66,8 @@
     <Compile Include="Model\CprParser.cs" />
     <Compile Include="Model\ParsedCpr.cs" />
     <Compile Include="Model\Person.cs" />
+    <Compile Include="ViewModel\Helpers\PersonExtensions.cs" />
+    <Compile Include="ViewModel\Helpers\WrappedPersonToBindTo.cs" />
     <Compile Include="ViewModel\BaseClasses\NotifyBase.cs" />
     <Compile Include="ViewModel\Helpers\DelegateCommand.cs" />
     <Compile Include="ViewModel\ViewModels\MainWindowViewModel.cs" />

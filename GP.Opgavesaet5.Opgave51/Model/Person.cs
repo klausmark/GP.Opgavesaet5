@@ -68,7 +68,7 @@ namespace GP.Opgavesaet5.Opgave51.Model
         {
             var birthday = GetBirthday();
             var years = (byte) (DateTime.Today.Year - birthday.Year);
-            if (birthday > DateTime.Today) years--;
+            if (birthday < DateTime.Today) years--;
             return years;
         }
     }
